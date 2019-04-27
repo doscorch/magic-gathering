@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand glyphicon glyphicon-flash" href="#"> Gathering</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+    <ul *ngIf='user.email' class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.email }}</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="login-view" class="container d-none">
+  <form id="login-form">
+    <h2>Login</h2>
+    <label for="input-email" class="sr-only">Email address</label>
+    <input type="email" name="email" id="email-input" class="form-control" placeholder="Email address" required>
+    <label for="input-password" class="sr-only">Password</label>
+    <input type="password" name="password" id="password-input" class="form-control" placeholder="Password" required>
+    <span class="btn btn-lg btn-primary btn-block" onclick="app.login()">Sign in</span>
+  </form>
+</div>
+<div id="user-list-view">
+
+</div>
+<div id="user-view">
+
+</div>
+<div id="deck-list-view">
+
+</div>
+<div id="deck-view">
+
+</div>
+<div id="card-detail-view">
+
+</div>
+<router-outlet></router-outlet>
