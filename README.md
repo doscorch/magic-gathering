@@ -1,27 +1,21 @@
 # Hw4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+This restful web application allows users to design decks of Magic the Gathering, (MTG), cards. Two roles are supported: admins and users. An admin will be able to created, edit, view, and search for users. Users will be able to view and search-for MTG cards as well as create, edit, view and search for their own MTG Decks. The MTG cards themselves are hosted on a 3rd party server. The API for this server is described at https://docs.magicthegathering.io/.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --proxy-config proxy.conf.json` in the client folder.
+Run `npm start` in the server folder.
 
-## Code scaffolding
+## Production server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng build` in the client folder.
+
+Paste the dest folder's contents into the server's public folder
+
+Run `sudo nohup npm start &` in the server folder.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `ng build` in the client folder.
+Run `npm install` in the server folder.
